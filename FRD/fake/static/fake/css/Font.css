@@ -1,0 +1,25 @@
+@font-face {
+    font-family:Azonix;
+    src: url('../Font/AzonixRegular 400.otf');
+}
+
+@font-face {
+    font-family:Centaur;
+    src: url('../Font/CENTAUR.TTF');
+}
+
+@font-face {
+    font-family:Jonesy;
+    src: url('../Font/Jonesy\ Capitals.ttf');
+}
+
+@font-face {
+    font-family:RobotL; /*Robot-Light*/
+    src: url('../Font/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family:RobotR;  /*Robot-Regular*/
+    src: url('../Font/Roboto-Regular.ttf');
+}
+

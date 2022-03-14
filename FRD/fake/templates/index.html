@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'fake/css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'fake/css/Radio.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <title>Django - Tool </title>
+</head>
+<body>
+    <!-- Main Section Start -->
+    <section>
+        <!-- Header Part Start-->
+        <header>
+            <nav>
+                <div><a href="#" class="brand">FRD</a></div>
+                <ul>
+                    <li><a href="#" class="active">Web App</a></li>
+                    <li><a href="#">Web Api</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header Part End -->
+
+        <!-- Main Content Part Start -->
+        <div class="fluid-container content">
+            <div class="row m-auto">
+                <!-- left side content part start -->
+                <div class="col-md-6 p-5 m-auto typo-content">
+                    <h1>
+                        welcome to ESD
+                    </h1>
+                    <h5>[Fake Review detection]</h2>
+                        <p>
+                            This a online platform where
+                            you can check any text either
+                            it is Fake Review or not.
+                        </p>
+                        <p>
+                            Just enter your text into the
+                            Textarea and select algorithm,
+                            press CHECK button and wait
+                            while your data proceds.
+                        </p>
+                        <p>
+                            After proccessing you will see
+                            result.
+                        </p>
+                </div>
+                <!-- Left side Text part end -->
+
+                <!-- Form Part Start -->
+                <div class="col-md-6 p-5 m-auto form-content">
+                    <form method="post" action="check" class="main-form">
+                        {% csrf_token %}
+                        <textarea name="rawdata" placeholder="Enter Your Text Here..." id="rawdata"></textarea><br>
+                        <div class="algo-choice">
+                            <label class="radiocontainer">Algo - 1
+                                <input type="radio" name="algo" value ="Algo-1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer">Algo - 2
+                                <input type="radio" name="algo" value ="Algo-2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <!-- <label class="radiocontainer">Algo - 3
+                                <input type="radio" name="algo" value ="Algo-3">
+                                <span class="checkmark"></span>
+                            </label> -->
+                        </div>
+                        <div class="check-holder">
+                            <button type="submit" class="check-btn">Check</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Form part end -->
+            </div>
+            <!-- Footer start -->
+            <div class="footer">
+                <p>Copyright &copy; 2021 Developed by <b>R_Wolves23</b></p>
+            </div>
+            <!-- Footer end -->
+        </div>
+        <!-- Main Content Part End -->
+    </section>
+    <!-- Main Section End -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="/Js/Main.js"></script>
+</body>
+</html>
